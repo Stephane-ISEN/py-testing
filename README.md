@@ -99,5 +99,3 @@ La classe contient les méthodes suivantes :
 
 
 
-
-
