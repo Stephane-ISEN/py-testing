@@ -26,6 +26,7 @@ ajouter une class `TestMultiPage`qui a pour attribut MP, un objet de type MultiP
 Attention à bien importer le fichier contenant la classe `MultiPage`.
 
 compléter la classe par les 3 méthodes suivantes :
+
   class TestMultiPage :
     MP = MultiPage()
     
