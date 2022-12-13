@@ -25,4 +25,28 @@ ajouter une class `TestMultiPage`qui a pour attribut MP, un objet de type MultiP
 
 Attention à bien importer le fichier contenant la classe `MultiPage`.
 
+compléter la classe par les 3 méthodes suivantes :
+  class TestMultiPage :
+    MP = MultiPage()
+    
+    def test_constructeur(self):
+      # test le constructeur
+      # en vérifiant que MP est bien une instance de MultiPage
+      pass
+   
+   def test_pages(self) :
+    # test l'attribut pages
+    # en vérifiant qu'on a bien une liste de taille 0
+    
+   def test_add_pages(self) :
+    # test la méthode add_pages()
+    # en ajoutant des pages 
+    # en vérifiant la taille de pages
+    # en vérifiant le format des pages ajouter
+
+On ne peut pas tester les méthodes home_title() et run() qui font appel à Streamlit pour afficher des composants graphiques sur une page web. Ca ne passe, évidement pas, dans une console.
+
+
+    
+
 
