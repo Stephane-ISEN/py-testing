@@ -37,4 +37,13 @@ class MoviesData :
         
         return list_years
 
+    def get_rating_counts(self) :
+        list_rating = []
+
+        for movie in self.movies : 
+            list_rating.append(movie.rating)
+        
+        rating_counts = pd.Index(list_rating).value_counts()
+
+        return rating_counts
 
