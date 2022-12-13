@@ -85,16 +85,6 @@ La classe contient les méthodes suivantes :
 - **test_construteur()** : qui vérifie que la liste movies (attribut de MD) contient bien 3 éléments et que les 4 valeurs du premier (soit les 4 attributs de l'objet Movie : title, id, realyse_year et rating).
 - **test_get_short_list()** : qui vérifie si la taille du dataframe retourné par la méthode `get_short_list(1)` et qu'un élément du dataframe à bien les données attendues. Le code de cette méthode est donné ci-dessous.
 - **test_get_realyse_year_array()** : qui vérifie que la liste retournée par la méthode `get_realyse_year_array()` contient bien les éléments suivants : 1993, 2021, 2021.
-
-
-      def test_add_pages(self) :
-        # test la méthode add_pages()
-        self.MP.add_page("one", TestMultipage)
-        self.MP.add_page("two", TestMultipage)
-        
-        assert len(self.MP.pages) == 2
-        assert self.MP.pages[0]["title"] == "one"
-        assert self.MP.pages[0]["object"] == TestMultipage 
         
       def test_getShortList(self):
         short_list = self.MD.get_short_list(1)
