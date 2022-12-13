@@ -18,7 +18,7 @@ Il y a un exemple dans le projet, fichier *test_netflix.py* que vous pouvez éx�
 
 ## exercice 1 : tester MultiPage
 
-ajouter une class `TestMultiPage`qui a pour attribut MP, un objet de type MultiPage : 
+Dans le fichier `test_netflix.py`ajouter une class `TestMultiPage`qui a pour attribut MP, un objet de type MultiPage : 
 `
   MP = MultiPage()
 `
@@ -76,6 +76,28 @@ Puisque la liste `pages` attend des dictionnaires contenant un titre, en chaine 
         assert self.MP.pages[0]["title"] == "one"
         assert self.MP.pages[0]["object"] == TestMultipage 
 
-    
+## exercice 2 : tester MoviesData
+Vous allez ajouter la classe TestMoviesData, toujours dans le fichier `test_netflix.py`, pour test MoviesData.
+
+Cette classe à un attribut, `MD`par exemple, qui est de type MoviesData. Il prend en paramètre le chemin de `netflix_test.csv`qui contient des données de tests.
+
+La classe contient les méthodes suivantes : 
+- **test_construteur()** : qui vérifie que la liste movies (attribut de MD) contient bien 3 éléments et que les 4 valeurs du premier (soit les 4 attributs de l'objet Movie : title, id, realyse_year et rating).
+- **test_get_short_list()** : qui vérifie si la taille du dataframe retourné par la méthode `get_short_list(1)` et qu'un élément du dataframe à bien les données attendues. Le code de cette méthode est donné ci-dessous.
+- **test_get_realyse_year_array()** : qui vérifie que la liste retournée par la méthode `get_realyse_year_array()` contient bien les éléments suivants : 1993, 2021, 2021.
+- **test_get_rating_counts()** : imaginer le test qui permet de vérifier la méthode `get_rating_counts()` à partir du fichier `netflix_test.csv`.
+
+    def test_getShortList(self):
+      short_list = self.MD.get_short_list(1)
+      movie01 = pd.DataFrame([("s8", "Sankofa", 1993, "TV-MA")])
+      
+      assert len(short_list) == 1
+      assert short_list.iloc[0,0] == movie01.iloc[0,0]
+      assert short_list.iloc[0,1] == movie01.iloc[0,1]
+      assert short_list.iloc[0,2] == movie01.iloc[0,2]
+      assert short_list.iloc[0,3] == movie01.iloc[0,3]
+
+
+
 
 
