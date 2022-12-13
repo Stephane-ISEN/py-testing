@@ -27,17 +27,17 @@ Attention à bien importer le fichier contenant la classe `MultiPage`.
 
 compléter la classe par les 3 méthodes suivantes :
 
-  class TestMultiPage :
-    MP = MultiPage()
+    class TestMultiPage :
+      MP = MultiPage()
     
-    def test_constructeur(self):
-      # test le constructeur
-      # en vérifiant que MP est bien une instance de MultiPage
-      pass
-   
-   def test_pages(self) :
-    # test l'attribut pages
-    # en vérifiant qu'on a bien une liste de taille 0
+      def test_constructeur(self):
+        # test le constructeur
+        # en vérifiant que MP est bien une instance de MultiPage
+        pass
+        
+      def test_pages(self) :
+        # test l'attribut pages
+        # en vérifiant qu'on a bien une liste de taille 0
     
    def test_add_pages(self) :
     # test la méthode add_pages()
