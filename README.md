@@ -87,15 +87,24 @@ La classe contient les méthodes suivantes :
 - **test_get_realyse_year_array()** : qui vérifie que la liste retournée par la méthode `get_realyse_year_array()` contient bien les éléments suivants : 1993, 2021, 2021.
 
 
-    def test_getShortList(self):
-      short_list = self.MD.get_short_list(1)
-      movie01 = pd.DataFrame([("s8", "Sankofa", 1993, "TV-MA")])
-      
-      assert len(short_list) == 1
-      assert short_list.iloc[0,0] == movie01.iloc[0,0]
-      assert short_list.iloc[0,1] == movie01.iloc[0,1]
-      assert short_list.iloc[0,2] == movie01.iloc[0,2]
-      assert short_list.iloc[0,3] == movie01.iloc[0,3]
+      def test_add_pages(self) :
+        # test la méthode add_pages()
+        self.MP.add_page("one", TestMultipage)
+        self.MP.add_page("two", TestMultipage)
+        
+        assert len(self.MP.pages) == 2
+        assert self.MP.pages[0]["title"] == "one"
+        assert self.MP.pages[0]["object"] == TestMultipage 
+        
+      def test_getShortList(self):
+        short_list = self.MD.get_short_list(1)
+        movie01 = pd.DataFrame([("s8", "Sankofa", 1993, "TV-MA")])
+        
+        assert len(short_list) == 1
+        assert short_list.iloc[0,0] == movie01.iloc[0,0]
+        assert short_list.iloc[0,1] == movie01.iloc[0,1]
+        assert short_list.iloc[0,2] == movie01.iloc[0,2]
+        assert short_list.iloc[0,3] == movie01.iloc[0,3]
 
 
 
