@@ -19,7 +19,9 @@ Il y a un exemple dans le projet, fichier *test_netflix.py* que vous pouvez éx�
 ## exercice 1 : tester MultiPage
 
 ajouter une class `TestMultiPage`qui a pour attribut MP, un objet de type MultiPage : 
+`
   MP = MultiPage()
+`
 
 Attention à bien importer le fichier contenant la classe `MultiPage`.
 
