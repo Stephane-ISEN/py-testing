@@ -57,8 +57,25 @@ Pour ce test, on va tout simplement utiliser la méthode isinstance() pour véri
 `assert`permet de prendre le test en compte par pytest.
 
 ### test_pages
+Ce test est simple aussi, puisqu'il doit vérifier l'existence de l'attribut `pages`dans `MP`. A la création de l'objet, cette liste est vide, donc de taille 0.
+
+      def test_pages(self) :
+        # test l'attribut pages
+        assert len(self.MP.pages) == 0
 
 ### test_add_pages
+Ce test doit vérifier que l'ajout de pages fonctionne bien. Le code commence donc par l'ajout de 2 pages et un nouveau test de la taille de l'attribut `pages`, qui doit être de 2, à ce moment.
+Puisque la liste `pages` attend des dictionnaires contenant un titre, en chaine de caractère, et une classe d'objet, le test va vérifier les types d'une des pages ajoutées dans la liste.
+
+      def test_add_pages(self) :
+        # test la méthode add_pages()
+        self.MP.add_page("one", TestMultipage)
+        self.MP.add_page("two", TestMultipage)
+        
+        assert len(self.MP.pages) == 2
+        assert self.MP.pages[0]["title"] == "one"
+        assert self.MP.pages[0]["object"] == TestMultipage 
+
     
 
 
