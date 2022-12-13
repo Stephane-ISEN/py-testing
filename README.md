@@ -1,25 +1,21 @@
-# py-testing
+# PyTest
 
-Projet de dashboard à destination des tests.
+PyTest est un package qui permet de développer ses propres tests unitaires automatiques.
 
-## architecture
+## installation
+`pip install pytest`
 
-Toute l'appli est codé en objet, architecture qui rend plus simple les tests, en plus de rendre le code évolutif.
-- **data** : contients les fichiers csv de données.
-- **models** : contients 2 classes permettant de traiter les données.
-- **views** : contient tous le code générant l'appli streamlit.
-- **app.py** : lance l'appli stremalit directement à partir de ce fichier Python.
+## fonctionnement
+Il faut tout d'abord créer une fichier test_quelquechose.py.
 
-## la docstring
+Dans ce fichier créer une classe TestClass par classe à tester.
+Y ajouter une méthode test_methode(self) par méthode à tester. L'idée c'est d'avoir une méthode de test par méthode à tester.
+Ecrire le code de test et ajouter autant de `assert` qu'il y a de méthode pour valider la méthode à tester. 
 
-Outils et normes pour les commentaires du code. voir les ressources suivantes :
-- un petit tuto sur la docstring avec VS Code : https://www.docstring.fr/formations/documenter-son-code/les-differents-types-de-commentaires-201/
-- des exemples de commentaires : https://gist.github.com/redlotus/3bc387c2591e3e908c9b63b97b11d24e 
+Une fois le fichier de tests écrit, lancer la commande `pytest`dans la console.
 
-Le docstring bien faite permet, grâce à pydoc, de générer les aides contextuelles et la documentation html.
+Il y a un exemple dans le projet, fichier *test_netflix.py* que vous pouvez éxécuter avec la commande `pytest`.
 
-## exercice sur la docstring
+## exercice 1 : tester MultiPage
 
-en s'inspirant de ce qui a été fait sur la classe Movie, commentez la classe MoviesData.
-
-le page de documentation html a été obtenue grâce à la commande suivante : `python -m pydoc -w movie`
+ajouter une class 
