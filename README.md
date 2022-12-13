@@ -47,7 +47,18 @@ compléter la classe par les 3 méthodes suivantes :
 
 On ne peut pas tester les méthodes home_title() et run() qui font appel à Streamlit pour afficher des composants graphiques sur une page web. Ca ne passe, évidement pas, dans une console.
 
+### test_constructeur
+Pour ce test, on va tout simplement utiliser la méthode isinstance() pour vérifier que l'attribut MP est bien de type MultiPage :
 
+      def test_constructeur(self):
+        # test le constructeur
+        assert isinstance(self.MP, MultiPage)
+
+`assert`permet de prendre le test en compte par pytest.
+
+### test_pages
+
+### test_add_pages
     
 
 
