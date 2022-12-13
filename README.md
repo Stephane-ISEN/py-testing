@@ -18,7 +18,7 @@ Outils et normes pour les commentaires du code. voir les ressources suivantes :
 
 Le docstring bien faite permet, grâce à pydoc, de générer les aides contextuelles et la documentation html.
 
-## exercices sur la docstring
+## exercice sur la docstring
 
 en s'inspirant de ce qui a été fait sur la classe Movie, commentez la classe MoviesData.
 
