@@ -22,9 +22,10 @@ Si on veut appliquer la méthode TDD, il faut :
 Le test est écrit dans le fichier `test_netflix.py`, dans la classe `TestMoviesData`. C'est en effet dans la classe `MoviesData`, qu'on va ajouter une méthode qui valide la 2e DBB. La méthode `get_rating_counts()` retourne une matrice contenant les données nécessaires à la construction du camembert. Cette matrice est obtenue à partir de la liste d'objet `movies`.
 
 commencer par écrire un `test_get_rating_counts(self)` qui permet de valider que la fonction `get_rating_counts()` retourne la matrice suivante : 
-**  TV-MA   1
-    TV-14   1
-    PG-13   1**
+
+**  TV-MA   1  
+    TV-14   1  
+    PG-13   1**  
 
 si vous utiliser la commande `pytest`ce test doit être rouge, pour le moment.
 
