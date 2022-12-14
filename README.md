@@ -30,3 +30,15 @@ Nous voulons mesurer les performances de la construction de la page Dashboard. I
 `dn`est un objet de type Dashboard, il faut penser à importer le code.
 
 Le premier test constitue à mesurer le temps d'éxécution du traitement. Pour ça, nous allons utiliser la méthode `timeit`de la librairie du même nom : [timeit](https://docs.python.org/fr/3/library/timeit.html)
+
+      @classmethod
+      def execution_time(cls, filename) :
+              # temps d'éxécution
+              n = 20
+              
+              result = timeit.timeit(lambda:Performances.test_dashboard(filename), number = n, globals = globals())
+              time = result / n * 1000    
+              
+              st.write(f" temps de charge et de traitement des données : {time : .2f} ms")
+
+Il ne vous reste plus qu'à faire appel à cette méthode dans le `show()` de votre classe Performances.
