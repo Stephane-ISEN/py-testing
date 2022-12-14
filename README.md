@@ -29,3 +29,4 @@ Nous voulons mesurer les performances de la construction de la page Dashboard. I
 
 `dn`est un objet de type Dashboard, il faut penser à importer le code.
 
+Le premier test constitue à mesurer le temps d'éxécution du traitement. Pour ça, nous allons utiliser la méthode `timeit`de la librairie du même nom : [timeit](https://docs.python.org/fr/3/library/timeit.html)
