@@ -29,7 +29,7 @@ Nous voulons mesurer les performances de la construction de la page Dashboard. I
 
 `dn`est un objet de type Dashboard, il faut penser à importer le code.
 
-Le premier test constitue à mesurer le temps d'éxécution du traitement. Pour ça, nous allons utiliser la méthode `timeit`de la librairie du même nom : [timeit](https://docs.python.org/fr/3/library/timeit.html)
+Le premier test constitue à mesurer le temps d'exécution du traitement. Pour ça, nous allons utiliser la méthode `timeit`de la librairie du même nom : [timeit](https://docs.python.org/fr/3/library/timeit.html)
 
       @classmethod
       def execution_time(cls, filename) :
@@ -42,3 +42,30 @@ Le premier test constitue à mesurer le temps d'éxécution du traitement. Pour 
               st.write(f" temps de charge et de traitement des données : {time : .2f} ms")
 
 Il ne vous reste plus qu'à faire appel à cette méthode dans le `show()` de votre classe Performances.
+
+## Nouveau test de temps d'éxécution
+
+en vous insprirant de la fonction précédente, et en utilisant [repeat](https://docs.python.org/3/library/timeit.html#timeit.Timer.repeat) affichez un histogramme qui présente plusieurs mesures du temps d'exécution.
+
+## Mesure de la mémoire consommée
+
+Grâce à la méthode suivante :
+
+      @classmethod
+      def sizeofblocks(cls, filename):
+            gc.collect()
+            before = sys.getallocatedblocks()
+            
+            movies = cls.test_dashboard(filename)
+            
+            tot = sys.getallocatedblocks() - before
+            
+- **gc.collect()** : permet de nettoyer la mémoire,
+- **sys.getallocatedBlocks()** : compte le nombre d'octet utilisé par l'appli (c.f. [doc](https://docs.python.org/3/library/tracemalloc.html))
+
+Comme pour les autres méthodes, pensez à l'appeler dans la méthode `show()`.
+
+## Mesure des données en mémoire
+Nous allons ajouter un dernier élément, la mesure de la mémoire utilisé par la donnée. 
+dans la méthode `sizeofblocks()`, utilisez la méthode `getsizeof()` pour afficher la taille mémoire des données utilisées pour le traitement.
+
