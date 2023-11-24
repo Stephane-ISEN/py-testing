@@ -61,7 +61,7 @@ Pour ce test, on va tout simplement utiliser la méthode isinstance() pour véri
 
 ### test_pages
 Ce test est simple aussi, puisqu'il doit vérifier l'existence de l'attribut `pages` dans `MP`. À la création de l'objet, cette liste est vide, donc de taille 0.
-
+```
   def test_pages(self) :
     # teste l'attribut pages
     assert len(self.MP.pages) == 0
@@ -77,6 +77,7 @@ Ce test est simple aussi, puisqu'il doit vérifier l'existence de l'attribut `pa
     assert len(self.MP.pages) == 2
     assert self.MP.pages[0]["title"] == "one"
     assert self.MP.pages[0]["object"] == TestMultiPage
+```
 
 ## Exercice 2 : Tester MoviesData
 Vous allez ajouter la classe `TestMoviesData`, toujours dans le fichier `test_netflix.py`, pour tester `MoviesData`.
