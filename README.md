@@ -89,6 +89,7 @@ La classe contient les méthodes suivantes :
 *   **test\_get\_short\_list()** : qui vérifie si la taille du dataframe retourné par la méthode `get_short_list(1)` est correcte et qu'un élément du dataframe a bien les données attendues. Le code de cette méthode est donné ci-dessous.
 *   **test\_get\_release\_year\_array()** : qui vérifie que la liste retournée par la méthode `get_release_year_array()` contient bien les éléments suivants : 1993, 2021, 2021.
 
+```
   def test_getShortList(self):
     short_list = self.MD.get_short_list(1)
     movie01 = pd.DataFrame([("s8", "Sankofa", 1993, "TV-MA")])
@@ -98,4 +99,4 @@ La classe contient les méthodes suivantes :
     assert short_list.iloc[0,1] == movie01.iloc[0,1]
     assert short_list.iloc[0,2] == movie01.iloc[0,2]
     assert short_list.iloc[0,3] == movie01.iloc[0,3]
-
+```
