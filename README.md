@@ -65,10 +65,9 @@ Ce test est simple aussi, puisqu'il doit vérifier l'existence de l'attribut `pa
     # teste l'attribut pages
     assert len(self.MP.pages) == 0
 
-### test_add_pages
-Ce test doit vérifier que l'ajout de pages fonctionne bien. Le code commence donc par l'ajout de 2 pages et un nouveau test de la taille de l'attribut `pages`, qui doit être de 2, à ce moment. Puisque la liste `pages` attend des dictionnaires contenant un titre, en chaîne de carac
+    ### test_add_pages
+    Ce test doit vérifier que l'ajout de pages fonctionne bien. Le code commence donc par l'ajout de 2 pages et un nouveau test de la taille de l'attribut `pages`, qui doit être de 2, à ce moment. Puisque la liste `pages` attend des dictionnaires contenant un titre, en chaîne de caractères
 
-```
   def test_add_pages(self) :
     # teste la méthode add_pages()
     self.MP.add_page("one", TestMultiPage)
@@ -99,7 +98,4 @@ La classe contient les méthodes suivantes :
     assert short_list.iloc[0,1] == movie01.iloc[0,1]
     assert short_list.iloc[0,2] == movie01.iloc[0,2]
     assert short_list.iloc[0,3] == movie01.iloc[0,3]
-
-
-
 
