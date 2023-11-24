@@ -61,6 +61,7 @@ Grâce à la méthode suivante :
         
         tot = sys.getallocatedblocks() - before
 
+
 *   **gc.collect()** : permet de nettoyer la mémoire,
 *   **sys.getallocatedblocks()** : compte le nombre d'octets utilisés par l'appli (cf. [doc](https://docs.python.org/3/library/sys.html#sys.getallocatedblocks))
 
