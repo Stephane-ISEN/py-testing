@@ -45,6 +45,7 @@ class TestMultiPage :
     # en vérifiant la taille de pages
     # en vérifiant le format des pages ajoutées
 
+
 On ne peut pas tester les méthodes home_title() et run() qui font appel à Streamlit pour afficher des composants graphiques sur une page web. Ça ne passe, évidemment pas, dans une console.
 
 ### test_constructeur
