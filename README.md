@@ -61,7 +61,6 @@ Pour ce test, on va tout simplement utiliser la méthode isinstance() pour véri
 ### test_pages
 Ce test est simple aussi, puisqu'il doit vérifier l'existence de l'attribut `pages` dans `MP`. À la création de l'objet, cette liste est vide, donc de taille 0.
 
-```
   def test_pages(self) :
     # teste l'attribut pages
     assert len(self.MP.pages) == 0
@@ -84,7 +83,6 @@ Vous allez ajouter la classe `TestMoviesData`, toujours dans le fichier `test_ne
 Cette classe a un attribut, `MD` par exemple, qui est de type `MoviesData`. Il prend en paramètre le chemin de `netflix_test.csv` qui contient des données de tests.
 
 La classe contient les méthodes suivantes :
-
 *   **test\_constructeur()** : qui vérifie que la liste `movies` (attribut de `MD`) contient bien 3 éléments et que les 4 valeurs du premier (soit les 4 attributs de l'objet `Movie` : `title`, `id`, `release_year` et `rating`).
 *   **test\_get\_short\_list()** : qui vérifie si la taille du dataframe retourné par la méthode `get_short_list(1)` est correcte et qu'un élément du dataframe a bien les données attendues. Le code de cette méthode est donné ci-dessous.
 *   **test\_get\_release\_year\_array()** : qui vérifie que la liste retournée par la méthode `get_release_year_array()` contient bien les éléments suivants : 1993, 2021, 2021.
