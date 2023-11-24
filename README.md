@@ -27,6 +27,7 @@ Nous voulons mesurer les performances de la construction de la page Dashboard. I
     dn.show_pie_ratings(all_movies)
     
     return all_movies
+```
 
 `dn` est un objet de type Dashboard, il faut penser à importer le code.
 
@@ -41,6 +42,7 @@ Le premier test consiste à mesurer le temps d'exécution du traitement. Pour ç
           time = result / n * 1000    
           
           st.write(f"Temps de charge et de traitement des données : {time : .2f} ms")
+```
 
 Il ne vous reste plus qu'à faire appel à cette méthode dans le `show()` de votre classe Performances.
 
@@ -60,7 +62,7 @@ Grâce à la méthode suivante :
         movies = cls.test_dashboard(filename)
         
         tot = sys.getallocatedblocks() - before
-
+```
 
 *   **gc.collect()** : permet de nettoyer la mémoire,
 *   **sys.getallocatedblocks()** : compte le nombre d'octets utilisés par l'appli (cf. [doc](https://docs.python.org/3/library/sys.html#sys.getallocatedblocks))
