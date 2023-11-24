@@ -55,6 +55,7 @@ Pour ce test, on va tout simplement utiliser la méthode isinstance() pour véri
   def test_constructeur(self):
     # teste le constructeur
     assert isinstance(self.MP, MultiPage)
+```
 
 `assert` permet de prendre le test en compte par pytest.
 
